@@ -1,0 +1,133 @@
+/* starting mobile design first to load faster on mobile devices */
+
+:root {
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite /*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
+    --VeryLightGray /*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--VeryLightGray);
+    font-size: 0.938rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    width: min(300px, 70%);
+    margin: 50px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 35px;
+    line-height: 23px;
+}
+
+section:nth-of-type(1) {
+    background-color: var(--BrightOrange);
+    border-radius: 5px 5px 0 0;
+}
+
+section:nth-of-type(2) {
+    background-color: var(--DarkCyan);
+}
+
+section:nth-of-type(3) {
+    background-color: var(--VeryDarkCyan);
+    border-radius: 0 0 5px 5px;
+}
+
+img {
+    width: 60px;
+    height: 40px;
+}
+
+img, h1, p {
+    margin-bottom: 15%;
+}
+
+p {
+    color: var(--TransparentWhite);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--VeryLightGray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--VeryLightGray);
+    color: currentColor;
+}
+
+#btn-one {
+    color: var(--BrightOrange);
+}
+
+#btn-two {
+    color: var(--DarkCyan);
+}
+
+#btn-three {
+    color: var(--VeryDarkCyan);
+}
+
+button:hover {
+    border: solid;
+    border-width: 2px;
+    border-color: var(--VeryLightGray);
+    background-color: inherit;
+    cursor: pointer;
+}
+
+#btn-one:hover, #btn-two:hover, #btn-three:hover {
+    color: var(--VeryLightGray);
+}
+
+/* desktop design */
+
+@media screen and (min-width: 376px) {
+    
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    section:nth-of-type(1) {
+        border-radius: 10px 0 0 10px;
+    }
+
+    section:nth-of-type(3) {
+        border-radius: 0 10px 10px 0;
+    }
+
+    section {
+        height: 450px;
+    }
+
+}
